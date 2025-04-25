@@ -10,12 +10,7 @@ def bubble_sort(array)
       previous_index = index - 1
 
       if array[previous_index] > array[index]
-
-        #keep one value in a third varible
-        #can't assign two variables at same time
-        value_to_swap = array[index]
-        array[index] = array[previous_index]
-        array[previous_index] = value_to_swap
+        array[index], array[previous_index] = array[previous_index], array[index]
         has_swapped = true
       end
     end
